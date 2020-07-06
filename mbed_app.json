@@ -25,11 +25,64 @@
     },
     "target_overrides": {
         "*": {
-            "target.network-default-interface-type": "ETHERNET",
+            "led-pin": "LED3",
+            "led-on": 0,
+            "led-off": 1,
+            "user-button": "BUTTON1",
+            "target.network-default-interface-type" : "ETHERNET",
             "mbed-trace.enable": null,
             "platform.stdio-baud-rate": 115200,
-            "platform.stdio-convert-newlines": false
+            "platform.stdio-convert-newlines": true
            },
+        "NUMAKER_PFM_M487": {
+            "target.network-default-interface-type" : "ETHERNET",
+            "target.macros_add"                     : ["MBEDTLS_ENTROPY_HARDWARE_ALT"]
+        },        
+        "NUMAKER_IOT_M487": {
+            "target.network-default-interface-type" : "WIFI",
+            "nsapi.default-wifi-security"           : "WPA_WPA2",
+            "nsapi.default-wifi-ssid"               : "\"SSID\"",
+            "nsapi.default-wifi-password"           : "\"PASSWORD\"",
+            "esp8266.tx"                            : "PH_8",
+            "esp8266.rx"                            : "PH_9",
+            "esp8266.rts"                           : "A2",
+            "esp8266.cts"                           : "A3",
+            "esp8266.rst"                           : "PH_3",
+            "esp8266.provide-default"               : true,
+            "target.macros_add"                     : ["MBEDTLS_ENTROPY_HARDWARE_ALT"]
+        },
+        "NUMAKER_IOT_M263A": {
+            "led-pin": "LED1",
+            "target.network-default-interface-type" : "WIFI",
+            "nsapi.default-wifi-security"           : "WPA_WPA2",
+            "esp8266.tx"                            : "PC_7",
+            "esp8266.rx"                            : "PC_6",
+            "esp8266.rts"                           : "PE_13",
+            "esp8266.cts"                           : "PC_8",
+            "esp8266.rst"                           : "PE_12",
+            "esp8266.provide-default"               : true
+        },        
+        "NUMAKER_PFM_NUC472": {
+            "target.network-default-interface-type" : "ETHERNET",
+            "target.macros_add"                     : ["MBEDTLS_ENTROPY_HARDWARE_ALT"]
+        },
+        "NU_PFM_M2351_NPSA_NS": {
+            "led-pin": "LED1",
+            "target.network-default-interface-type" : "WIFI",
+            "nsapi.default-wifi-security"           : "WPA_WPA2",
+            "esp8266.tx"                            : "PD_1",
+            "esp8266.rx"                            : "PD_0",
+            "esp8266.rts"                           : "PD_3",
+            "esp8266.cts"                           : "PD_2",
+            "esp8266.rst"                           : "NC",
+            "esp8266.pwr"                           : "PD_7",
+            "esp8266.provide-default"               : true,
+            "target.extra_labels_remove"            : ["NU_PREBUILD_SECURE"],
+            "target.mbed_rom_start"                 : "0x10010000",
+            "target.mbed_rom_size"                  : "0x70000",
+            "target.mbed_ram_start"                 : "0x30002000",
+            "target.mbed_ram_size"                  : "0x16000"
+        },
         "K64F": {
             "led-pin": "LED3",
             "led-on": 0,
