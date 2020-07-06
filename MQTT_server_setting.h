@@ -1,12 +1,12 @@
 #ifndef __MQTT_SERVER_SETTING_H__
 #define __MQTT_SERVER_SETTING_H__
 
-const char MQTT_SERVER_HOST_NAME[] = "<< REPLACE_HERE >>";
+const char MQTT_SERVER_HOST_NAME[] = "a1fljoeglhtf61.iot.us-east-2.amazonaws.com";
 const char MQTT_CLIENT_ID[] = "<< REPLACE_HERE >>";
 const char MQTT_USERNAME[] = "<< REPLACE_HERE >>";
 const char MQTT_PASSWORD[] = "<< REPLACE_HERE >>";
 const char MQTT_TOPIC_PUB[] = "<< REPLACE_HERE >>";
-const char MQTT_TOPIC_SUB[] = "<< REPLACE_HERE >>";
+const char MQTT_TOPIC_SUB[] = "Nuvoton/Mbed/D001";
 
 
 const int MQTT_SERVER_PORT = 8883;
@@ -78,8 +78,26 @@ const char* SSL_CA_PEM =
  * ...
  * "-----END CERTIFICATE-----\n";
  */
-const char* SSL_CLIENT_CERT_PEM = NULL;
-
+const char* SSL_CLIENT_CERT_PEM =  "-----BEGIN CERTIFICATE-----\n"
+    "MIIDWTCCAkGgAwIBAgIUAzDIpEQWV/yKVo8suGhvjmFY0n4wDQYJKoZIhvcNAQEL\n"
+    "BQAwTTFLMEkGA1UECwxCQW1hem9uIFdlYiBTZXJ2aWNlcyBPPUFtYXpvbi5jb20g\n"
+    "SW5jLiBMPVNlYXR0bGUgU1Q9V2FzaGluZ3RvbiBDPVVTMB4XDTE4MDQxNzA5NDMx\n"
+    "M1oXDTQ5MTIzMTIzNTk1OVowHjEcMBoGA1UEAwwTQVdTIElvVCBDZXJ0aWZpY2F0\n"
+    "ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKsLlECiw4ud5laejJmL\n"
+    "bBhafKLdCRx6tkcjBYyEUoAC3Qs2ogqGngQgjU4QJoWpEBO/U1M+e1QtlZ2o/CiL\n"
+    "MViHA3rYvP86N/TH8pFA3aPKaeEp+WIt5v4OXdfPkVNKTotiRuRCpzRzrY4xKp11\n"
+    "ouKkVKf3FcNuKIMt/uEhje90KofBbFHQY3HFYe19qIg1m/IBV+npmNlAKElGNSB7\n"
+    "xHHLzzUuue38s+ceJyzsWuPjFiVYoeyPHF8gDVWf28XJ4KUFs80Deycqe9efroud\n"
+    "cQY/6aLDWDJXHvhenwoAIbHqUsYRoWoanrg5Cq3id5+pzVkadNV3+x9bGwROhpbQ\n"
+    "M9ECAwEAAaNgMF4wHwYDVR0jBBgwFoAUVUXg3+Dd1qSnAT9LN413zSdNoE0wHQYD\n"
+    "VR0OBBYEFIx86SOxw5k/50GtyRjUwlj+9d1gMAwGA1UdEwEB/wQCMAAwDgYDVR0P\n"
+    "AQH/BAQDAgeAMA0GCSqGSIb3DQEBCwUAA4IBAQCI1fqqjvLAFzL2E1nvWMrkaWN2\n"
+    "EQK44uOcw53ZzgNNH7fJ85BW8T2l1yZx/Blgs10pEp7vmccnRoR7nYbUGO8++9nG\n"
+    "S7bfZhiaE2syJqqvLwPGdqR6fvDdfEpmhgJ1CqeMCqun9XZvUTsgBn7Sqqz7P99h\n"
+    "gGmDRKS/CtsPai0Df0ZPNuV/YuUkpHKJSDm+ZTnzevMS3KXkG1cc/sIuc4IwF+aj\n"
+    "nbyzdC2fN0r+34srQ8/9aXezOTQ0NBWtoJCCkD+LL6PYJJkAgLA2jcbcbuRJUQ7n\n"
+    "Zsp25kKX40fuyIcgPRsd/7sao3zTVYxwKy8r6/mbgrPiMeHvJZ8y3nwUpsPO\n"
+    "-----END CERTIFICATE-----\n";
 
 /*
  * (optional) Client private key here in PEM format.
@@ -88,6 +106,32 @@ const char* SSL_CLIENT_CERT_PEM = NULL;
  * ...
  * "-----END RSA PRIVATE KEY-----\n";
  */
-const char* SSL_CLIENT_PRIVATE_KEY_PEM = NULL;
-
+const char* SSL_CLIENT_PRIVATE_KEY_PEM = "-----BEGIN RSA PRIVATE KEY-----\n"
+    "MIIEowIBAAKCAQEAqwuUQKLDi53mVp6MmYtsGFp8ot0JHHq2RyMFjIRSgALdCzai\n"
+    "CoaeBCCNThAmhakQE79TUz57VC2Vnaj8KIsxWIcDeti8/zo39MfykUDdo8pp4Sn5\n"
+    "Yi3m/g5d18+RU0pOi2JG5EKnNHOtjjEqnXWi4qRUp/cVw24ogy3+4SGN73Qqh8Fs\n"
+    "UdBjccVh7X2oiDWb8gFX6emY2UAoSUY1IHvEccvPNS657fyz5x4nLOxa4+MWJVih\n"
+    "7I8cXyANVZ/bxcngpQWzzQN7Jyp715+ui51xBj/posNYMlce+F6fCgAhsepSxhGh\n"
+    "ahqeuDkKreJ3n6nNWRp01Xf7H1sbBE6GltAz0QIDAQABAoIBAAzl7KILJA/NMmdp\n"
+    "wVR6zQXxHODzJhK9ti0bGPoFqGr6zExiLEn66MOK6NzwHteJbirvDIuEdKxeW5/t\n"
+    "9EXiaTAxzjNfULE2ZK3Svhnx+ES3qNBP5/xdVcPmtXDmuCC9w7qDCLGBzTYJWxcT\n"
+    "4hDJpCTPG4sm+L8p+Wga+dNkQl3CFyHHINDZ0pKcP0kDDt6inKfiU7uU4lFYbCZy\n"
+    "PceUgIOTQiNVoPQYtkHgZAtmD9rcwdq2/0GZEbzTkZuSE9S8+WlGxJP5xMGzeVsv\n"
+    "zZ/scx0LM7fz5Zq0lsvAwSB1mcs04DaaNpU7Z0tXDIS249RTqdtpPkJzmevpAGhF\n"
+    "VNe30/kCgYEA4rflfqyw/YHWKRxCGJRO+q0gPvlBIes30noz5Hxl0knb/J5Ng4Nx\n"
+    "xMaIMZgCbwHbw5i01JOPvVKICROKb8wkli4Y2eVzxMPKk2CSpji16RQZ4eOl3YXL\n"
+    "1Vnn07Ei+GpsGgDNF0HWf/Ur7es/KdAPCWbKJyoSR90+WN29gP2+Zp8CgYEAwSLv\n"
+    "Kt/vdd6XKnR9xR3IajsW/X2GR/x/m2JffJPOP6VpDTKAbv86hVHDV0oBEDMDc7qy\n"
+    "023ognyFCPb9Gzol2lq8egjMsisA2bgoB9HqldrSYlaZ0wPe0QJBf1gZ29jPyVJ0\n"
+    "ciaBbNbSRhwTrwet7Bae9EbpJsyvBxVh00v0f48CgYEAvKQKviXudmCL01UB4fW0\n"
+    "6XsXs44tlY1juyuW9exTxG9ULZOCJ4U9Kl+OfsVecQL42ny7KY1GMl7zdanerDsN\n"
+    "zi+42cTDWNsYORxHqSrSoYbqKjwCjJmBCppt/IQM9umF3PUBsPJFCd7zmFj/C0lk\n"
+    "2Yu/dGrbHxSFheeqgCOhQz0CgYBfZxdHUYji64o2cYay+QxH1Vp86yWKp6KNKeHL\n"
+    "EuP9soKa/0hMDA1nT8UzeB3gV6Kr5xxwrkj9M+8vR3otmeKa4tlZWsFqfS2VXo9/\n"
+    "lWTQk1/7LZYckzvceMXL1sQnQgkaBH366SRjlBYYhcP/YMa76Uypk+GVxePrltdU\n"
+    "3Z8v5wKBgEXL38yc9LqTIWe1U40ZZKvp2A8c86jtstorEEFqXharE8kxcEpL8ZLL\n"
+    "wjgPKdfNMIuApHSrhG7a7gU1rgJyDy1sOIwSvgTYrWfITPTVu5owvSZEblx4KYOm\n"
+    "g8hke3Oego4v9cwctkQss3/HZ6rs3PR942oAetuxLy3KPF83IeFm\n"
+    "-----END RSA PRIVATE KEY-----\n";
+    
 #endif /* __MQTT_SERVER_SETTING_H__ */
