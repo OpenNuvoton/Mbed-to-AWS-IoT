@@ -121,6 +121,7 @@ int main(int argc, char* argv[])
         }
     }
     printf("Network interface opened successfully.\r\n");
+    printf("Connected to the network successfully. IP address: %s\n", network->get_ip_address());
     printf("\r\n");
 
     // sync the real time clock (RTC)
